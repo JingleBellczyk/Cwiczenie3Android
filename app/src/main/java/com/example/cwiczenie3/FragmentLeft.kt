@@ -38,20 +38,6 @@ class FragmentLeft : Fragment() {
         return inflater.inflate(R.layout.fragment_left, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        // Poniżej dodaj kod związany z nawigacją
-        val navHostFragment =
-            requireActivity().supportFragmentManager.findFragmentById(R.id.fragment_center) as NavHostFragment
-        val navController = navHostFragment.navController
-
-        // Teraz możesz użyć 'navController' do nawigacji pomiędzy fragmentami
-        // np. navController.navigate(R.id.destinationFragment)
-
-        // ...
-    }
-
     companion object {
         /**
          * Use this factory method to create a new instance of

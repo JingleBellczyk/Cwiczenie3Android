@@ -12,21 +12,32 @@
     app:navGraph="@navigation/nav_graph">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_center"
-        android:name="com.example.cwiczenie3.FragmentCenter"
+        android:id="@+id/dfContainer"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph = "@navigation/nav_graph"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout="@layout/fragment_center"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/fragment_center"-->
+<!--        android:name="com.example.cwiczenie3.FragmentCenter"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:layout="@layout/fragment_center"-->
+<!--        />-->
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="start"
         android:background="@color/white"
         app:menu="@menu/my_navigation_items"
-
         />
 
 

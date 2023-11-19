@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.fragment.NavHostFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity()
 //    ,StaticFragment.OnSelectListener
@@ -20,6 +22,31 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.dfContainer) as NavHostFragment
+        val navController = navHostFragment.navController
+        val bottomNavigationView : BottomNavigationView = findViewById(R.id.bottom_navigation)
+
+        // Ustaw nasłuchiwanie zdarzeń dla BottomNavigationView
+        bottomNavigationView.setOnItemSelectedListener{
+            when(it.itemId){
+                R.id.fragment_left -> {
+                    Log.d("mTag","fragmentLeeeeeft")
+                    navController.navigate(R.id.action_global_to_fragLeft)
+                    true
+                }
+                R.id.fragment_center -> {
+                    Log.d("mTag","fragmentCenter")
+                    navController.navigate(R.id.action_global_to_fragCenter)
+                    true
+                }
+                R.id.fragment_right -> {
+                    Log.d("mTag","fragmentRight")
+                    navController.navigate(R.id.action_global_to_fragRight)
+                    true
+                }
+                else -> false
+            }
+        }
 ////    brak utraty danych przy rotacji 1.1.4
 //        if(savedInstanceState == null){
 //            frag1 = Fragment1().newInstance()
