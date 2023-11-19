@@ -4,27 +4,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/fragment_left"
-        android:icon="@drawable/leftarrow"
         android:visible="true"
         android:enabled="true"
-        android:title="TODO"
+        android:title="◄"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/fragment_center"
-        android:icon="@drawable/center"
         android:enabled="true"
         android:visible="true"
-        android:title="TODO"
+        android:title="▲"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/fragment_right"
-        android:icon="@drawable/rightarrow"
         android:enabled="true"
         android:visible="true"
-        android:title="TODO"
-        app:itemIconTint="@android:color/transparent"
-
+        android:title="►"
         app:showAsAction="ifRoom"
-
         />
 </menu>
