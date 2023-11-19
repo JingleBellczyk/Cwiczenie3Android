@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragmentCenter">
+
+    <fragment
+        android:id="@+id/fragmentCenter"
+        android:name="com.example.cwiczenie3.FragmentCenter"
+        android:label="FragmentCenter" />
+    <fragment
+        android:id="@+id/fragmentLeft"
+        android:name="com.example.cwiczenie3.FragmentLeft"
+        android:label="fragment_left"
+        tools:layout="@layout/fragment_left" />
+    <fragment
+        android:id="@+id/fragmentRight"
+        android:name="com.example.cwiczenie3.FragmentRight"
+        android:label="fragment_right"
+        tools:layout="@layout/fragment_right" />
+
+    <action
+        android:id="@+id/action_global_to_fragLeft"
+        app:destination="@id/fragmentLeft" />
+
+    <action
+        android:id="@+id/action_global_to_fragCenter"
+        app:destination="@id/fragmentCenter" />
+
+    <action
+        android:id="@+id/action_global_to_fragRight"
+        app:destination="@id/fragmentRight" />
+
+</navigation>
