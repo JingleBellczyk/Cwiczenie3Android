@@ -2,33 +2,33 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/fragmentCenter">
+    app:startDestination="@id/fragment_center">
 
     <fragment
-        android:id="@+id/fragmentCenter"
+        android:id="@+id/fragment_center"
         android:name="com.example.cwiczenie3.FragmentCenter"
         android:label="FragmentCenter" />
     <fragment
-        android:id="@+id/fragmentLeft"
+        android:id="@+id/fragment_left"
         android:name="com.example.cwiczenie3.FragmentLeft"
         android:label="fragment_left"
         tools:layout="@layout/fragment_left" />
     <fragment
-        android:id="@+id/fragmentRight"
+        android:id="@+id/fragment_right"
         android:name="com.example.cwiczenie3.FragmentRight"
         android:label="fragment_right"
         tools:layout="@layout/fragment_right" />
 
     <action
         android:id="@+id/action_global_to_fragLeft"
-        app:destination="@id/fragmentLeft" />
+        app:destination="@id/fragment_left" />
 
     <action
         android:id="@+id/action_global_to_fragCenter"
-        app:destination="@id/fragmentCenter" />
+        app:destination="@id/fragment_center" />
 
     <action
         android:id="@+id/action_global_to_fragRight"
-        app:destination="@id/fragmentRight" />
+        app:destination="@id/fragment_right" />
 
 </navigation>
